@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Автомобильный салон</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="logo/logo.png" alt="AutoPrime Logo">
+                        <span>Автомобильный салон</span>
+                    </a>
+                </div>
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        
+        <nav class="vertical-menu" id="verticalMenu">
+            <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Главная</a>
+            <a href="login.html" class="nav-link active"><i class="fas fa-sign-in-alt"></i> Вход</a>
+            <a href="register.html" class="nav-link"><i class="fas fa-user-plus"></i> Регистрация</a>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="auth-container">
+                <div class="auth-form">
+                    <h2><i class="fas fa-sign-in-alt"></i> Вход в личный кабинет</h2>
+                    
+                    <form id="loginForm" data-validate>
+                        <div class="form-group">
+                            <label for="username"><i class="fas fa-user"></i> Логин</label>
+                            <input type="text" id="username" name="username" required placeholder="Введите ваш логин">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="password"><i class="fas fa-lock"></i> Пароль</label>
+                            <input type="password" id="password" name="password" required placeholder="Введите ваш пароль">
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            <i class="fas fa-sign-in-alt"></i> Войти
+                        </button>
+                        
+                        <div class="auth-links">
+                            <p>Нет аккаунта? <a href="register.html">Зарегистрируйтесь</a></p>
+                            <p><a href="index.html">Вернуться на главную</a></p>
+                            <p><small>Для теста: admin / admin</small></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Автомобильный салон</h3>
+                    <p>Автомобильный салон премиум-класса</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <p><i class="fas fa-phone"></i> +7 (495) 123-45-67</p>
+                    <p><i class="fas fa-envelope"></i> info@auto.ru</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Специфичный код для страницы входа
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const username = document.getElementById('username').value;

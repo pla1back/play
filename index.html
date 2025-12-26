@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Автомобильный салон</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <span>Автомобильный салон</span>
+                    </a>
+                </div>
+                
+                <!-- Навигация для десктопа -->
+                <nav class="desktop-nav">
+                    <a href="index.html" class="nav-link active"><i class="fas fa-home"></i> Главная</a>
+                    <a href="#news" class="nav-link"><i class="fas fa-newspaper"></i> Новости</a>
+                    <a href="#cars" class="nav-link"><i class="fas fa-car"></i> Автомобили</a>
+                    <a href="services.html" class="nav-link"><i class="fas fa-tools"></i> Услуги</a>
+                    <a href="contact.html" class="nav-link"><i class="fas fa-phone"></i> Контакты</a>
+                    <a href="login.html" class="nav-link login-btn"><i class="fas fa-user"></i> Войти</a>
+                    <a href="register.html" class="nav-link"><i class="fas fa-user-plus"></i> Регистрация</a>
+                </nav>
+                
+                <!-- Мобильное меню -->
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Вертикальное меню для мобильных -->
+        <nav class="vertical-menu" id="verticalMenu">
+            <a href="index.html" class="nav-link active"><i class="fas fa-home"></i> Главная</a>
+            <a href="#news" class="nav-link"><i class="fas fa-newspaper"></i> Новости</a>
+            <a href="#cars" class="nav-link"><i class="fas fa-car"></i> Автомобили</a>
+            <a href="services.html" class="nav-link"><i class="fas fa-tools"></i> Услуги</a>
+            <a href="contact.html" class="nav-link"><i class="fas fa-phone"></i> Контакты</a>
+            <a href="login.html" class="nav-link"><i class="fas fa-user"></i> Войти</a>
+            <a href="register.html" class="nav-link"><i class="fas fa-user-plus"></i> Регистрация</a>
+            <a href="cabinet.html" class="nav-link"><i class="fas fa-user-circle"></i> Личный кабинет</a>
+        </nav>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Счетчик посетителей -->
+            <section class="visitor-counter">
+                <h2><i class="fas fa-users"></i> Посетители сайта</h2>
+                <div class="counter-box">
+                    <span class="counter-number" id="visitorCount">0</span>
+                    <p>человек посетили наш салон онлайн</p>
+                </div>
+            </section>
+
+            <!-- Последние новости -->
+            <section class="news-section" id="news">
+                <h2 class="section-title">Последние новости</h2>
+                <div class="news-grid">
+                    <article class="news-card">
+                        <div class="news-image-container">
+                            <img src="q1.jpg" 
+                                 alt="Новая коллекция BMW" 
+                                 class="news-image"
+                                 data-large="q1.jpg">
+                                 <div class="news-date">15.11.2025</div>
+                        </div>
+                        <div class="news-content">
+                            <span class="news-category">Новые поступления</span>
+                            <h3>Поступила новая коллекция BMW 2024</h3>
+                            <p>В нашем салоне появились новые модели BMW 2024 года с улучшенными характеристиками...</p>
+                            <a href="#" class="read-more">Читать далее →</a>
+                        </div>
+                    </article>
+
+                    <article class="news-card">
+                        <div class="news-image-container">
+                            <img src="q3.jpg" 
+                                 alt="Акция на обслуживание"
+                                 class="news-image"
+                                 data-large="q3.jpg">
+                            <div class="news-date">10.11.2025</div>
+                        </div>
+                        <div class="news-content">
+                            <span class="news-category">Акции</span>
+                            <h3>Скидка 20% на зимнее обслуживание</h3>
+                            <p>Готовьте свой автомобиль к зиме! Специальное предложение на зимнее обслуживание...</p>
+                            <a href="#" class="read-more">Читать далее →</a>
+                        </div>
+                    </article>
+
+                    <article class="news-card">
+                        <div class="news-image-container">
+                            <img src="q2.jpg" 
+                                 alt="Тест-драйв Mercedes"
+                                 class="news-image"
+                                 data-large="">
+                            <div class="news-date">05.11.2025</div>
+                        </div>
+                        <div class="news-content">
+                            <span class="news-category">События</span>
+                            <h3>День открытых дверей Mercedes</h3>
+                            <p>Приглашаем на тест-драйв новых моделей Mercedes-Benz. Уникальная возможность...</p>
+                            <a href="#" class="read-more">Читать далее →</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Каталог автомобилей -->
+            <section class="cars-section" id="cars">
+                <h2 class="section-title">Популярные автомобили</h2>
+                <div class="cars-grid">
+                    <div class="car-card">
+                        <img src="q3.png" alt="BMW X5">
+                        <h3>BMW X5 2024</h3>
+                        <p class="car-price">от 5 800 000 ₽</p>
+                        <button class="btn btn-outline">Подробнее</button>
+                    </div>
+                    <div class="car-card">
+                        <img src="q4.webp">
+                        <h3>Mercedes-Benz E-Class</h3>
+                        <p class="car-price">от 4 900 000 ₽</p>
+                        <button class="btn btn-outline">Подробнее</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Форма обратной связи -->
+            <section class="contact-section" id="contact">
+                <h2 class="section-title">Остались вопросы?</h2>
+                <p class="section-subtitle">Оставьте заявку и наш менеджер свяжется с вами в течение 15 минут</p>
+                <div class="contact-form">
+                    <input type="text" placeholder="Ваше имя" class="form-input">
+                    <input type="tel" placeholder="Телефон" class="form-input">
+                    <button class="btn btn-primary">Отправить заявку</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Автомобильный салон</h3>
+                    <p>Автомобильный салон премиум-класса. Лучшие автомобили по доступным ценам.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <p><i class="fas fa-map-marker-alt"></i>Чегемский р. ул.3</p>
+                    <p><i class="fas fa-phone"></i> +7 (495) 123-45-67</p>
+                    <p><i class="fas fa-envelope"></i> info@auto.ru</p>
+                    <p><i class="fas fa-clock"></i> Пн-Пт: 9:00-20:00</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Быстрые ссылки</h3>
+                    <a href="login.html">Вход в личный кабинет</a>
+                    <a href="register.html">Регистрация</a>
+                    <a href="requests.html">Мои заявки</a>
+                    <a href="create-request.html">Создать заявку</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p> 2025 Все права защищены.</p>
+                <a href="#" class="privacy-link">Политика конфиденциальности</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно для увеличенного изображения -->
+    <div class="modal" id="imageModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <img id="modalImage" src="" alt="Увеличенное изображение">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
